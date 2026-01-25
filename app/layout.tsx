@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <h1>Hello from layout</h1>
+        <header>
+          <h1>My App</h1>
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="about">About</Link>
+            <Link href="profile">Profile</Link>
+          </nav>
+        </header>
         {children}
       </body>
     </html>
