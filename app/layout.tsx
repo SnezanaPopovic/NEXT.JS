@@ -15,15 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body>
         <header>
           <h1>My App</h1>
-          <nav>
+          {/* <nav>
             <Link href="/">Home</Link>
             <Link href="about">About</Link>
             <Link href="profile">Profile</Link>
-          </nav>
+          </nav> */}
         </header>
         {children}
       </body>

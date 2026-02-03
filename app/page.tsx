@@ -6,14 +6,14 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>Posts</h1>
+      {/* <h1>Posts</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa mollitia,
         vitae unde soluta incidunt, ullam veritatis iusto, id culpa rerum beatae
         corrupti ipsum facilis ex excepturi laudantium. Placeat, veniam ratione?
       </p>
       <ClientComponent />
-      <ToggleButton />
+      <ToggleButton /> */}
     </div>
   );
 }
