@@ -9,7 +9,7 @@ generator client {
 datasource db {
   provider = "sqlite"
 }
-model Task {
+model Todo {
   id        Int      @id @default(autoincrement())
   title     String
   userId    Int
