@@ -16,3 +16,5 @@ model Todo {
   created   DateTime @default(now())
   completed Boolean  @default(false)
 }
+
+

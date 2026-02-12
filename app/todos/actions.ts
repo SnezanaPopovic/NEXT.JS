@@ -14,5 +14,8 @@ export async function addTodo(formData: FormData) {
     },
   });
 
-  revalidatePath("/todos");
+  revalidatePath("/todos"); //refresh
 }
+
+//crud create,read,update,delete
+//preko prisma komuniciramo sa bazom
