@@ -1,19 +1,36 @@
+// Ispravno uvezenje tipa Metadata
+import type { Metadata } from "next";
 import ClientComponent from "./components/ClientComponent";
-import ToggleButton from "./components/ToggleButton";
+
+export const metadata: Metadata = {
+  title: "Home page",
+  description: "This is home page",
+};
+
 export default async function Home() {
-  const respoonse = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await respoonse.json();
+  // Fetch podataka
+  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+  const data = await response.json();
+  console.log(data);
 
   return (
     <div>
-      {/* <h1>Posts</h1>
+      <h1>Home page</h1>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa mollitia,
-        vitae unde soluta incidunt, ullam veritatis iusto, id culpa rerum beatae
-        corrupti ipsum facilis ex excepturi laudantium. Placeat, veniam ratione?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+        exercitationem fugiat alias asperiores vero quisquam illo quaerat
+        aliquam? Magnam harum voluptatibus enim eveniet rerum natus ea vitae
+        temporibus laborum quam repudiandae, ad mollitia. Molestias nihil quasi
+        quis perferendis eum quo pariatur aut perspiciatis architecto, optio,
+        sequi dolores labore? Ipsum rem enim quia dignissimos repellat quasi
+        corporis earum sed illum sequi quae, recusandae minima odit dolore sit
+        praesentium asperiores, accusamus ducimus voluptatibus nemo. Debitis
+        voluptatum accusamus in quas sequi, veniam incidunt quibusdam illo sunt
+        quasi officia sapiente! Quasi praesentium placeat dolorum nemo, dolores
+        incidunt sunt aliquid facere, velit unde consequatur.
       </p>
+      {/* Primer client component */}
       <ClientComponent />
-      <ToggleButton /> */}
     </div>
   );
 }

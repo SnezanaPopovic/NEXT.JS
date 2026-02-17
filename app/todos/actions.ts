@@ -1,21 +1,21 @@
-// "use server";
-// import { prisma } from "@/lib/prisma";
-// import { revalidatePath } from "next/cache";
+"use server";
+import { prisma } from "@/lib/prisma";
+import { revalidatePath } from "next/cache";
 
-// export async function addTodo(formData: FormData) {
-//   const titleValue = formData.get("title") as string;
-//   if (!titleValue || !titleValue.trim()) {
-//     return;
-//   }
+export async function addTodo(formData: FormData) {
+  const titleValue = formData.get("title") as string;
+  if (!titleValue || !titleValue.trim()) {
+    return;
+  }
 
-//   await prisma.todo.create({
-//     data: {
-//       title: titleValue.trim(),
-//     },
-//   });
+  await prisma.todo.create({
+    data: {
+      title: titleValue.trim(),
+    },
+  });
 
-//   revalidatePath("/todos"); //refresh
-// }
+  revalidatePath("/todos"); //refresh
+}
 
-// //crud create,read,update,delete
-// //preko prisma komuniciramo sa bazom
+//crud create,read,update,delete
+//preko prisma komuniciramo sa bazom
