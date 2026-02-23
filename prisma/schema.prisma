@@ -1,15 +1,15 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../app/generated"
 }
 
 datasource db {
   provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 model Todo {
   id        Int      @id @default(autoincrement())
   title     String
-  createdAt DateTime @default(now())
   completed Boolean  @default(false)
+  createdAt DateTime @default(now())
 }
